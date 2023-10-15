@@ -1,10 +1,12 @@
+// Inside time.h
 
-#include <stdio.h>
-#include <sys/time.h>
+#ifndef _TIME_H_
+#define _TIME_H_
 
-int main() {
-    struct timeval current_time;
-    gettimeofday(&current_time, NULL);
-    printf("Current time: %ld.%06ld\n", current_time.tv_sec, current_time.tv_usec);
-    return 0;
-}
+struct time_info {
+    uint creation_time;
+    uint end_time;
+    uint total_time;
+};
+
+#endif // _TIME_H_
